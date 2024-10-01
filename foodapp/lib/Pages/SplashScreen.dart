@@ -25,18 +25,19 @@ class SplashScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             InkWell(
               onTap: () {
                 Navigator.pushReplacementNamed(context, "homePage");
               },
               child: Ink(
-                padding: EdgeInsets.symmetric(horizontal: 80, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 80, vertical: 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: Color(0xff00a368),
+                  color: const Color(0xff00a368),
                 ),
-                child: Text(
+                child: const Text(
                   "Get Started",
                   style: TextStyle(
                       color: Colors.white,
