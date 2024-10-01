@@ -3,10 +3,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff00a368),
+        backgroundColor: const Color(0xff00a368),
         body: SafeArea(
             child: SingleChildScrollView(
           child: Column(
@@ -16,7 +18,7 @@ class HomePage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.menu,
                       color: Colors.white,
                       size: 30,
@@ -24,7 +26,7 @@ class HomePage extends StatelessWidget {
                     Container(
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          color: Color(0xff00a368),
+                          color: const Color(0xff00a368),
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: [
                             BoxShadow(
@@ -36,11 +38,11 @@ class HomePage extends StatelessWidget {
                         child: badges.Badge(
                           position:
                               badges.BadgePosition.topEnd(top: -10, end: -12),
-                          badgeStyle: badges.BadgeStyle(
+                          badgeStyle: const badges.BadgeStyle(
                             badgeColor: Colors.red,
                             padding: EdgeInsets.all(6),
                           ),
-                          badgeContent: Text(
+                          badgeContent: const Text(
                             "3",
                             style: TextStyle(color: Colors.white),
                           ),
@@ -56,6 +58,49 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
+              //welcome text
+              Container(
+                alignment: Alignment.centerLeft,
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Welcome",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 35,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text("What do you want to order today?",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold))
+                    ]),
+              ),
+              //search bar
+              Container(
+                  padding: EdgeInsets.symmetric(horizontal: 15),
+                  margin: EdgeInsets.all(15),
+                  height: 50,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Row(children: [
+                    Icon(
+                      Icons.search,
+                    ),
+                    Container(
+                        margin: EdgeInsets.only(left: 10),
+                        width: 250,
+                        child: TextField(
+                          decoration: InputDecoration(
+                              border: InputBorder.none, hintText: "Search"),
+                        )),
+                    Spacer(),
+                    Icon(Icons.filter_list),
+                  ]))
             ],
           ),
         )));
