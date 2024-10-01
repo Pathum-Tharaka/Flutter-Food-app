@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => SplashScreen(),
+        "/": (context) => const SplashScreen(),
         "homePage": (context) => HomePage(),
       },
     );
