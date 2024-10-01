@@ -1,6 +1,9 @@
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:foodapp/widgets/CategoriesWidget.dart';
+import 'package:foodapp/widgets/PopularItemWidget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,9 +11,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xff00a368),
-        body: SafeArea(
-            child: SingleChildScrollView(
+      backgroundColor: const Color(0xff00a368),
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
             children: [
               Container(
@@ -100,9 +103,27 @@ class HomePage extends StatelessWidget {
                         )),
                     Spacer(),
                     Icon(Icons.filter_list),
-                  ]))
+                  ])),
+              //products widget
+              Container(
+                  padding: EdgeInsets.only(top: 20),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CategoriesWidget(),
+                      PopularItemWidget(),
+                    ],
+                  ))
             ],
           ),
-        )));
+        ),
+      ),
+    );
   }
 }
