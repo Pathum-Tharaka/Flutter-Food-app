@@ -30,7 +30,7 @@ class PopularItemWidget extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              for (int i = 1; i < 8; i++)
+              for (int i = 1; i < 9; i++)
                 Container(
                   margin: EdgeInsets.all(10),
                   padding: EdgeInsets.all(5),
@@ -47,7 +47,7 @@ class PopularItemWidget extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: Image.asset("images/img${i}.png"),
+                  child: Image.asset("images/img$i.png"),
                 )
             ],
           ),
