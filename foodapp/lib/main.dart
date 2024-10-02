@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp/Pages/HomePage.dart';
+import 'package:foodapp/Pages/ItemPage.dart';
 import 'package:foodapp/Pages/SplashScreen.dart';
 
 void main() {
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         "/": (context) => const SplashScreen(),
-        "homePage": (context) => const HomePage(),
+        "homePage": (context) => HomePage(),
+        "itemPage": (context) => ItemPage(),
       },
     );
   }
