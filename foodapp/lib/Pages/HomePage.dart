@@ -64,8 +64,8 @@ class HomePage extends StatelessWidget {
               //welcome text
               Container(
                 alignment: Alignment.centerLeft,
-                padding: EdgeInsets.symmetric(horizontal: 15),
-                child: Column(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -84,30 +84,30 @@ class HomePage extends StatelessWidget {
               ),
               //search bar
               Container(
-                  padding: EdgeInsets.symmetric(horizontal: 15),
-                  margin: EdgeInsets.all(15),
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  margin: const EdgeInsets.all(15),
                   height: 50,
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(children: [
-                    Icon(
+                    const Icon(
                       Icons.search,
                     ),
                     Container(
-                        margin: EdgeInsets.only(left: 10),
+                        margin: const EdgeInsets.only(left: 10),
                         width: 250,
-                        child: TextField(
+                        child: const TextField(
                           decoration: InputDecoration(
                               border: InputBorder.none, hintText: "Search"),
                         )),
-                    Spacer(),
-                    Icon(Icons.filter_list),
+                    const Spacer(),
+                    const Icon(Icons.filter_list),
                   ])),
               //products widget
               Container(
-                  padding: EdgeInsets.only(top: 20),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.only(top: 20),
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
