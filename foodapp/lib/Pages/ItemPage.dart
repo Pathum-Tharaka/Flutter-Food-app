@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:foodapp/widgets/BottomBar.dart';
 
 class ItemPage extends StatelessWidget {
   @override
@@ -43,6 +44,7 @@ class ItemPage extends StatelessWidget {
                   ),
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding: EdgeInsets.only(top: 10, bottom: 15),
@@ -60,7 +62,7 @@ class ItemPage extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                padding: EdgeInsets.all(4),
+                                padding: EdgeInsets.all(3),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(20),
@@ -111,6 +113,69 @@ class ItemPage extends StatelessWidget {
                         ],
                       ),
                     ),
+                    Row(
+                      //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.star, color: Colors.amber, size: 30),
+                        Text(
+                          "4.8(230)",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20),
+                      child: Column(
+                          //crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Description",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "aaaaaaaaaaaaaaaaa aaaaaa aaaa a a a a aaaaaaaa aaaaa a a  aaaaaaaaaaa aaaaaaaaaaaa aaa a a aa a  aa a aaaa.",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 17,
+                              ),
+                              textAlign: TextAlign.justify,
+                            ),
+                          ]),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "Delivery Time",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 19,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Spacer(),
+                        Icon(
+                          CupertinoIcons.clock,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "20 Minutes",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ),
@@ -118,6 +183,7 @@ class ItemPage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }
