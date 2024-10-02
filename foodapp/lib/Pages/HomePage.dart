@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:foodapp/widgets/CategoriesWidget.dart';
+import 'package:foodapp/widgets/ItemWidget.dart';
 import 'package:foodapp/widgets/PopularItemWidget.dart';
 
 class HomePage extends StatelessWidget {
@@ -118,6 +119,7 @@ class HomePage extends StatelessWidget {
                     children: [
                       CategoriesWidget(),
                       PopularItemWidget(),
+                      ItemWidget()
                     ],
                   ))
             ],
