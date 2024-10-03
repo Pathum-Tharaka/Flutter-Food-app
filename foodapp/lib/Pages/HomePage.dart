@@ -2,9 +2,11 @@ import 'package:badges/badges.dart' as badges;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:foodapp/widgets/BottomCartSheet.dart';
 import 'package:foodapp/widgets/CategoriesWidget.dart';
 import 'package:foodapp/widgets/ItemWidget.dart';
 import 'package:foodapp/widgets/PopularItemWidget.dart';
+import 'package:sliding_sheet2/sliding_sheet2.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -51,7 +53,18 @@ class HomePage extends StatelessWidget {
                             style: TextStyle(color: Colors.white),
                           ),
                           child: InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              showSlidingBottomSheet(context,
+                                  builder: (context) {
+                                return SlidingSheetDialog(
+                                  elevation: 8,
+                                  cornerRadius: 16,
+                                  builder: (context, state) {
+                                    return BottomCartSheet();
+                                  },
+                                );
+                              });
+                            },
                             child: const Icon(
                               CupertinoIcons.cart,
                               size: 30,
