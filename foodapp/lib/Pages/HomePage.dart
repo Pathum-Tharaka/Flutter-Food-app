@@ -120,7 +120,7 @@ class HomePage extends StatelessWidget {
                   ])),
               //products widget
               Container(
-                  padding: const EdgeInsets.only(top: 20),
+                  padding: const EdgeInsets.only(top: 0),
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
