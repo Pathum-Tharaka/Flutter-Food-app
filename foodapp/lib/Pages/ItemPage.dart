@@ -13,7 +13,7 @@ class ItemPage extends StatelessWidget {
             children: [
               Container(
                   margin: EdgeInsets.all(15),
-                  height: 350,
+                  height: 310,
                   width: double.infinity,
                   alignment: Alignment.topLeft,
                   decoration: BoxDecoration(
@@ -129,7 +129,7 @@ class ItemPage extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 20),
                       child: Column(
-                          //crossAxisAlignment: CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               "Description",
